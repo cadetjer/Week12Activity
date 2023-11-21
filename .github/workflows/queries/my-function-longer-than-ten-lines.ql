@@ -11,7 +11,7 @@ import javascript
  */
 predicate isLongerThanTenLines(Function f) {
   exists(Function f |
-    f.getNumLines() >= 10
+    f.getNumLines() > 10
   )
 }
 
