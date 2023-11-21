@@ -10,7 +10,9 @@ import javascript
  * Holds if a function is longer than 10 lines.
  */
 predicate isLongerThanTenLines(Function f) {
-  exists(f.getNumLines() >= 10);
+  exists(Function f |
+    f.getNumLines() >= 10
+  )
 }
 
 from Function f
