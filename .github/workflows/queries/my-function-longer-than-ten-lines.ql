@@ -5,21 +5,16 @@
  * @problem.severity recommendation
  */
 import javascript
- 
-predicate isJavaScriptOrTypeScriptFile(File file) {
-  file.getExtension() = "ts" or file.getExtension() = "tsx"
-}
 
 /**
  * Holds if a function is longer than 10 lines.
  */
-predicate isLongerThanTenLines(Function f) {
-  exists(Function f |
-    f.getNumLines() > 10
+predicate isLongerThanTenLines(Function func) {
+  exists(Function func |
+    func.getNumLines() > 10
   )
 }
 
-from File file, Function f
-where isJavaScriptOrTypeScriptFile(file) and
-  isLongerThanTenLines(f)
-select f, "has at least 10 lines"
+from Function func
+where isLongerThanTenLines(func)
+select func, "is longer than 10 lines"
