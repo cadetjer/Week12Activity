@@ -1,5 +1,5 @@
 /**
- * @description My queries
+ * @description finds functions longer than 10 lines
  * @kind problem
  * @id javascript/my-function-queries
  * @problem.severity recommendation
