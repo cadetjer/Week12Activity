@@ -39,7 +39,7 @@ jobs:
       uses: github/codeql-action/init@v2
       with:
         languages: ${{ matrix.language }}
-        queries: "./.github/workflows/queries/my-function-longer-than-ten-lines.ql"
+        queries: "./.github/workflows/queries"
         # EDIT THE ABOVE LINE TO ADD ANY EXTRA QUERIES YOU NEED
 
     - name: Autobuild
